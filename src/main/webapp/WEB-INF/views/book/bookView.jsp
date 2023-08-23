@@ -1,3 +1,4 @@
+<%@page import="com.ezen.book.BookVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>     
@@ -126,7 +127,7 @@
 		<c:if test="${sessionScope.mvo.grade=='a'}">
 			<button type="button" id="btnEdit" onclick="bookEdit()" class="btn btn-warning" >도서수정</button>
 	 		<button type="button" id="btnDelete" onclick="bookDelete()" class="btn btn-danger" >도서삭제</button> 
-	 		<button type="submit" id="btnSave" class="btn btn-primary" style="display:none;">도서저장</button> 
+	 		<button type="submit" id="btnSave" onclick="bookSave()" class="btn btn-primary" style="display:none;">도서저장</button> 
 	 		<button type="reset" id="btnCancle" onclick="bookCancle()" class="btn btn-info" style="display:none;">수정취소</button>
  		</c:if> 
     </div>
@@ -292,10 +293,10 @@ function saveStarAfter(data){
 		}
 	}
 	//도서저장
-	//function bookSave(){
-		//document.querySelector("#uploadForm") 폼태그의 요소가져오기 
-	//	document.querySelector("#uploadForm").submit();
-	//}
+	function bookSave(){
+		//document.querySelector("#uploadForm")// 폼태그의 요소가져오기 
+		document.querySelector("#uploadForm").submit();
+	}
 	function bookCancle(){
 		$(".disp").css("display","block");
 		$(".edit").css("display","none");
