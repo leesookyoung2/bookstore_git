@@ -18,7 +18,7 @@ public class BookController extends HttpServlet {
 		// get,post 모두 이곳으로 온다
 		// encoding
 		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html;charset=utf");
+		response.setContentType("text/html;charset=utf-8");
 		// 서비스 객체 생성 : 수행메소드 실행
 		// view 변수 :  이동할 jsp 페이지
 		String view=new BookService(request,response).exec();
